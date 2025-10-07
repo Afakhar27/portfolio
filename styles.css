@@ -65,8 +65,19 @@ ul{padding-left:18px;margin:8px 0}
 li{margin:6px 0}
 
 .grid.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.item{background:var(--card);border:1px solid rgba(122,162,255,.15);border-radius:14px;padding:16px}
+.item{
+  background:var(--card);
+  border:1px solid rgba(122,162,255,.15);
+  border-radius:14px;
+  padding:16px;
+  transition: all .2s ease;
+}
+.item:hover{
+  transform: translateY(-3px);
+  border-color: rgba(122,162,255,.3);
+}
 .item .meta{display:block;color:var(--muted);font-size:14px;margin-top:2px}
+.project-links{margin-top:12px;display:flex;gap:12px}
 
 .timeline{list-style:none;padding:0;margin:0;display:grid;gap:12px}
 .timeline li{background:var(--card);border:1px solid rgba(122,162,255,.15);border-radius:12px;padding:14px}
@@ -77,6 +88,26 @@ li{margin:6px 0}
 .contacts li,.links li{list-style:none;margin:6px 0}
 .links a{color:var(--primary-2);text-decoration:none}
 .links a:hover{text-decoration:underline}
+
+/* Contact Form */
+.contact-form{
+  background:var(--card);
+  border:1px solid rgba(122,162,255,.15);
+  border-radius:12px;
+  padding:24px;
+}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;margin-bottom:6px;font-weight:600}
+.form-group input, .form-group textarea{
+  width:100%;
+  padding:10px;
+  background:var(--bg);
+  border:1px solid rgba(122,162,255,.2);
+  border-radius:8px;
+  color:var(--text);
+  font-size:16px;
+}
+.form-group textarea{min-height:120px;resize:vertical}
 
 .site-footer{padding:28px 0;border-top:1px solid rgba(122,162,255,.15);color:var(--muted)}
 
@@ -89,4 +120,3 @@ li{margin:6px 0}
   .grid.two{grid-template-columns:1fr}
   .contact-grid{grid-template-columns:1fr}
 }
-
