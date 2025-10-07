@@ -5,15 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ikram Afakhar — Portfolio</title>
     <meta name="description" content="Portfolio d'Ikram Afakhar — Développement Full Stack web, Java, mobile, approche DevOps." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://afakhar27.github.io/portfolio/" />
+    <meta property="og:title" content="Ikram Afakhar — Portfolio" />
+    <meta property="og:description" content="Portfolio d'Ikram Afakhar — Développement Full Stack web, Java, mobile, approche DevOps." />
+    <meta property="og:image" content="https://afakhar27.github.io/portfolio/me.jpg" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container header-content">
-        <div class="intro">
+        <div class="intro" data-aos="fade-right">
           <h1>Ikram Afakhar</h1>
           <p class="role">Développeuse Full Stack</p>
           <p class="summary">
@@ -24,7 +33,7 @@
             <a class="btn" href="#projets">Voir mes projets</a>
           </div>
         </div>
-        <div class="avatar">
+        <div class="avatar" data-aos="fade-left">
           <div class="avatar-box" aria-label="Photo de profil">
             <!-- Photo de profil -->
             <img src="me.jpg" alt="Ikram Afakhar" />
@@ -35,7 +44,7 @@
 
     <main>
       <section id="competences" class="section">
-        <div class="container">
+        <div class="container" data-aos="fade-up">
           <h2>Compétences</h2>
           <div class="grid two">
             <div>
@@ -89,7 +98,7 @@
       </section>
 
       <section id="experiences" class="section alt">
-        <div class="container">
+        <div class="container" data-aos="fade-up">
           <h2>Expériences professionnelles</h2>
           <article class="item">
             <header>
@@ -116,7 +125,7 @@
       </section>
 
       <section id="projets" class="section">
-        <div class="container">
+        <div class="container" data-aos="fade-up">
           <h2>Projets académiques</h2>
           <div class="grid two">
             <div class="item">
@@ -156,7 +165,7 @@
       </section>
 
       <section id="education" class="section alt">
-        <div class="container">
+        <div class="container" data-aos="fade-up">
           <h2>Diplômes et formations</h2>
           <ul class="timeline">
             <li>
@@ -180,7 +189,7 @@
       </section>
 
       <section id="contact" class="section">
-        <div class="container">
+        <div class="container" data-aos="fade-up">
           <h2>Contact</h2>
           <div class="contact-grid">
             <div>
@@ -208,8 +217,13 @@
       </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
     </script>
   </body>
   </html>
