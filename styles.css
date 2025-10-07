@@ -89,26 +89,6 @@ li{margin:6px 0}
 .links a{color:var(--primary-2);text-decoration:none}
 .links a:hover{text-decoration:underline}
 
-/* Contact Form */
-.contact-form{
-  background:var(--card);
-  border:1px solid rgba(122,162,255,.15);
-  border-radius:12px;
-  padding:24px;
-}
-.form-group{margin-bottom:16px}
-.form-group label{display:block;margin-bottom:6px;font-weight:600}
-.form-group input, .form-group textarea{
-  width:100%;
-  padding:10px;
-  background:var(--bg);
-  border:1px solid rgba(122,162,255,.2);
-  border-radius:8px;
-  color:var(--text);
-  font-size:16px;
-}
-.form-group textarea{min-height:120px;resize:vertical}
-
 .site-footer{padding:28px 0;border-top:1px solid rgba(122,162,255,.15);color:var(--muted)}
 
 /* Responsive */
