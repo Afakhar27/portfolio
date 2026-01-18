@@ -108,6 +108,31 @@ li{margin:6px 0}
 .links a{color:var(--primary-2);text-decoration:none}
 .links a:hover{text-decoration:underline}
 
+/* Formulaire Contact */
+.contact-form {
+  margin-top: 32px;
+  background: var(--card);
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid rgba(122,162,255,.15);
+}
+.form-group { margin-bottom: 16px; }
+.form-group label { display: block; margin-bottom: 8px; color: var(--text); }
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 12px;
+  background: var(--bg);
+  border: 1px solid rgba(122,162,255,.2);
+  border-radius: 8px;
+  color: var(--text);
+  font-family: inherit;
+}
+.form-group textarea { resize: vertical; min-height: 120px; }
+.form-group input:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
 /* Back to top button */
 .back-to-top {
   position: fixed;

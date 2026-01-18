@@ -189,7 +189,7 @@
               <span class="meta">Spring Boot, React, K8s, Azure, Terraform</span>
               <p>Full-stack avec CI/CD (Jenkins), Docker & Kubernetes sur Azure. Monitoring via Prometheus/Grafana.</p>
               <div class="project-links">
-                <a href="mailto:afakhariikram@gmail.com?subject=Code Access Request: Gestion Produits DevOps" class="btn" aria-label="Demander l'accès au code">Demander l'accès</a>
+                <button onclick="requestAccess('Application Gestion de Produits')" class="btn" aria-label="Demander l'accès au code">Demander l'accès</button>
               </div>
             </div>
 
@@ -198,7 +198,7 @@
               <span class="meta">Electron, Node.js, Gemini, GitHub Actions</span>
               <p>Application de bureau intégrant l'IA Gemini. Pipeline CI/CD complet avec Docker et Kubernetes.</p>
               <div class="project-links">
-                 <a href="mailto:afakhariikram@gmail.com?subject=Code Access Request: Assistant IA" class="btn" aria-label="Demander l'accès au code">Demander l'accès</a>
+                 <button onclick="requestAccess('Assistant IA Desktop')" class="btn" aria-label="Demander l'accès au code">Demander l'accès</button>
               </div>
             </div>
 
@@ -207,7 +207,7 @@
               <span class="meta">Python, Deep Learning, GNN</span>
               <p>Amélioration des performances de segmentation via hyperparamètres et entraînement sur dataset annoté.</p>
               <div class="project-links">
-                 <a href="mailto:afakhariikram@gmail.com?subject=Code Access Request: Optimisation GNN" class="btn" aria-label="Demander l'accès au code">Demander l'accès</a>
+                 <button onclick="requestAccess('Optimisation Modèle GNN')" class="btn" aria-label="Demander l'accès au code">Demander l'accès</button>
               </div>
             </div>
 
@@ -216,7 +216,7 @@
               <span class="meta">Flutter</span>
               <p>App mobile complète : gestion catalogue, panier, commandes et utilisateurs.</p>
               <div class="project-links">
-                 <a href="mailto:afakhariikram@gmail.com?subject=Code Access Request: E-commerce Mobile" class="btn" aria-label="Demander l'accès au code">Demander l'accès</a>
+                 <button onclick="requestAccess('Application E-commerce Mobile')" class="btn" aria-label="Demander l'accès au code">Demander l'accès</button>
               </div>
             </div>
 
@@ -225,7 +225,7 @@
               <span class="meta">Java</span>
               <p>Logiciel desktop pour l'affectation des salles, gestion des absences et optimisation des emplois du temps.</p>
               <div class="project-links">
-                 <a href="mailto:afakhariikram@gmail.com?subject=Code Access Request: Gestion Collège" class="btn" aria-label="Demander l'accès au code">Demander l'accès</a>
+                 <button onclick="requestAccess('Gestion Administrative Collège')" class="btn" aria-label="Demander l'accès au code">Demander l'accès</button>
               </div>
             </div>
 
@@ -235,7 +235,7 @@
               <span class="meta">PHP, MySQL, JS</span>
               <p>Espace entreprise/candidat avec évaluation automatisée des CVs.</p>
               <div class="project-links">
-                 <a href="mailto:afakhariikram@gmail.com?subject=Code Access Request: Plateforme Recrutement" class="btn" aria-label="Demander l'accès au code">Demander l'accès</a>
+                 <button onclick="requestAccess('Plateforme de Recrutement')" class="btn" aria-label="Demander l'accès au code">Demander l'accès</button>
               </div>
             </div>
 
@@ -294,6 +294,25 @@
               </ul>
             </div>
           </div>
+
+          <!-- Formulaire Netlify -->
+          <form name="contact" method="POST" data-netlify="true" class="contact-form" id="contactForm">
+            <h3>Envoyer un message</h3>
+            <div class="form-group">
+              <label for="name">Nom</label>
+              <input type="text" id="name" name="name" required placeholder="Votre nom ou entreprise">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="votre@email.com">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required placeholder="Bonjour, je souhaiterais discuter de..."></textarea>
+            </div>
+            <button type="submit" class="btn primary">Envoyer</button>
+          </form>
+
         </div>
       </section>
     </main>
@@ -315,6 +334,21 @@
         duration: 800,
         once: true,
       });
+
+      // Request Access Logic
+      function requestAccess(projectName) {
+        const contactSection = document.getElementById('contact');
+        const messageField = document.getElementById('message');
+        
+        // Scroll to contact form
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+        
+        // Pre-fill fields
+        setTimeout(() => {
+          messageField.value = `Bonjour,\n\nJe suis intéressé par votre projet "${projectName}" et je souhaiterais en savoir plus ou voir le code.\n\nCordialement,`;
+          messageField.focus();
+        }, 500);
+      }
 
       // Back to Top Logic
       const backToTopBtn = document.getElementById('backToTop');
