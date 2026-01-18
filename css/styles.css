@@ -206,3 +206,16 @@ li{margin:6px 0}
   .grid.two{grid-template-columns:1fr}
   .contact-grid{grid-template-columns:1fr}
 }
+
+
+/* Project Links */
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px dashed var(--primary);
+  transition: all 0.3s ease;
+}
+.project-link:hover {
+  color: var(--primary);
+  border-bottom-style: solid;
+}
