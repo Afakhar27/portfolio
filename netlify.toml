@@ -1,0 +1,8 @@
+[build]
+  publish = "."
+  command = "# Pas de commande de build nécessaire pour un site statique"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
