@@ -296,7 +296,8 @@
           </div>
 
           <!-- Formulaire Netlify -->
-          <form name="contact" method="POST" data-netlify="true" class="contact-form" id="contactForm">
+          <form name="contact" method="POST" action="success.html" data-netlify="true" class="contact-form" id="contactForm">
+            <input type="hidden" name="form-name" value="contact" />
             <h3>Envoyer un message</h3>
             <div class="form-group">
               <label for="name">Nom</label>
