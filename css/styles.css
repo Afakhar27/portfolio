@@ -72,12 +72,15 @@ h1{margin:0 0 8px;font-size:40px;letter-spacing:.3px}
   box-shadow: 0 0 15px rgba(255, 87, 34, 0.4);
 }
 
-.avatar-box{
-  background:var(--card);
-  border:1px solid rgba(255, 87, 34, 0.2);
-  border-radius:16px;
-  padding:12px;
-}
+ .avatar-box {
+   background: var(--card);
+   border: 1px solid rgba(255, 87, 34, 0.2);
+   border-radius: 16px;
+   padding: 12px;
+   box-shadow: 0 0 0 6px rgba(255, 87, 34, 0.15), 0 0 32px 8px rgba(255, 87, 34, 0.35);
+   position: relative;
+   transition: box-shadow 0.3s;
+ }
 .avatar-box img{display:block;width:100%;height:auto;border-radius:12px}
 
 /* Sections */
