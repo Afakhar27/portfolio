@@ -6,21 +6,6 @@ AOS.init({
   once: true,
 });
 
-// Request Access Logic
-function requestAccess(projectName) {
-  const contactSection = document.getElementById('contact');
-  const messageField = document.getElementById('message');
-  
-  // Scroll to contact form
-  contactSection.scrollIntoView({ behavior: 'smooth' });
-  
-  // Pre-fill fields
-  setTimeout(() => {
-    messageField.value = `Bonjour,\n\nJe suis intéressé par votre projet "${projectName}" et je souhaiterais en savoir plus ou voir le code.\n\nCordialement,`;
-    messageField.focus();
-  }, 500);
-}
-
 // Back to Top Logic
 const backToTopBtn = document.getElementById('backToTop');
 
