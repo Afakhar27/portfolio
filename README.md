@@ -5,7 +5,7 @@ Portfolio personnel (site statique) présentant mes compétences, certifications
 ## Aperçu
 
 - **Nom** : Ikram Afakhar  
-- **Rôle** : Software Engineering Student | Full Stack & DevOps  
+- **Rôle** : Software Engineer | Full Stack & DevOps  
 - **Site (GitHub Pages)** : https://afakhar27.github.io/portfolio/
 
 ## Stack & technologies
